@@ -9,6 +9,6 @@ route.get('/', getAllApis);
 route.route('/signin').post(checkValidation);
 route.route('/getrestaurantslist').get(getRestaurantsList);
 route.route('/getreviews').get(getReviews);
-route.route('/getleftoverdetails').get(getLeftOvwwerFood);
+route.route('/getleftoverdetails').get(getLeftOverFood);
 route.route('/createleftover').post(createLeftOver);
 module.exports = route;
