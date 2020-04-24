@@ -7,7 +7,7 @@ const routes = require('./routes');
 // const connect = require('./model/connect')
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://gourmet:gourmet@cluster0-vr9mv.mongodb.net/gourmet-db?retryWrites=true&w=majority',{ useUnifiedTopology: true }
+mongoose.connect('mongodb+srv://gourmet:gourmet@cluster0-vr9mv.mongodb.net/gourmet-db?retryWrites=true&w=majority',{ useUnifiedTopology: true, useNewUrlParser: true }
 )
  
 var db = mongoose.connection;
