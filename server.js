@@ -1,5 +1,5 @@
 const app = require('./index');
-
-app.listen(3000, 'localhost', () => {
-    console.log('app started');
+var port = process.env.PORT || 3008;
+app.listen(port, () => {
+    console.log('app started: ', + port);
 });
