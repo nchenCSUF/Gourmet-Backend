@@ -6,8 +6,13 @@ exports.createUser = (req, res, next) => {
     const item = new user({
         id,email,firstName, lastName, type, preference, fav
     });
-    item.save();
-    res.status(200).json({'msg': 'User added'});
+    msg="saved"
+    item.save(function (err) {
+        if (err) {
+            msg = "error" + err
+        }
+      });
+    res.status(200).json({'msg': msg});
 }
 
 exports.getUser = (req, res, next) => {
