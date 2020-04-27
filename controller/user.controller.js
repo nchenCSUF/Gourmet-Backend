@@ -12,7 +12,7 @@ exports.createUser = (req, res, next) => {
 
 exports.getUser = (req, res, next) => {
     id = req.query.id;
-    console.log(req)
+    console.log("sign in request" , req)
     user.find({"email":id},(err, data) => {
         if(err) {
            console.error(err)
