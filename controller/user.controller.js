@@ -11,12 +11,13 @@ exports.createUser = (req, res, next) => {
 }
 
 exports.getUser = (req, res, next) => {
-    id = req.body.id;
-    user.find({"id":id},(err, data) => {
+    id = req.query.id;
+    console.log(req)
+    user.find({"email":id},(err, data) => {
         if(err) {
            console.error(err)
         }
-        console.log(data)
+        console.log(data, "getuser data")
         res.send({"msg":data});
     });
    

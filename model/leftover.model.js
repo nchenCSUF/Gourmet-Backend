@@ -4,7 +4,9 @@ const leftOverSchema = new mongoose.Schema({
     foodType: String,
     serves: Number,
     address: String,
-    useBy: String
+    useBy: String,
+    comments: String,
+    id: String
 });
 
 module.exports = mongoose.model('left-over-food', leftOverSchema);
